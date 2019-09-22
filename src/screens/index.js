@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Logo from "../assets/img/logo-white.png";
 import Hero from "../assets/img/hero.jpg";
 
@@ -37,6 +37,35 @@ const LogoImage = styled.img`
 const HeadingPrimary = styled.h1`
   color: #ffffff;
   text-transform: uppercase;
+  backface-visibility: hidden;
+`;
+
+const MoveInLeft = keyframes`
+  0% { 
+    opacity: 0 ;
+    transform: translateX(-100px)
+  }
+
+  80% {
+    transform: translateX(10px)
+  }
+  100% { 
+    opacity:1 ;
+    transform: translateX(0)}
+`;
+
+const MoveInRight = keyframes`
+  0% { 
+    opacity: 0 ;
+    transform: translateX(100px)
+  }
+
+  80% {
+    transform: translateX(-10px)
+  }
+  100% { 
+    opacity:1 ;
+    transform: translateX(0)}
 `;
 
 const HeadingPrimaryMain = styled.span`
@@ -44,6 +73,12 @@ const HeadingPrimaryMain = styled.span`
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+  animation: ${MoveInLeft} 1s ease-out;
+  /* animation-iteration-count: 3;
+  animation-delay: 2s;
+  animation-timing-function: cubic-bezier();
+
+  */
 `;
 
 const HeadingPrimarySub = styled.span`
@@ -51,6 +86,7 @@ const HeadingPrimarySub = styled.span`
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
+  animation: ${MoveInRight} 1s ease-out;
 `;
 
 export default class Main extends Component {
