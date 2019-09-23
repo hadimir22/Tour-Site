@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import Logo from "../assets/img/logo-white.png";
 import Hero from "../assets/img/hero.jpg";
 
@@ -28,6 +28,7 @@ const TextDiv = styled.div`
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 `;
 
 const LogoImage = styled.img`
@@ -68,6 +69,18 @@ const MoveInRight = keyframes`
     transform: translateX(0)}
 `;
 
+const MoveUp = keyframes`
+  0% { 
+    opacity: 0 ;
+    transform: translateY(30px)
+  }
+
+  
+  100% { 
+    opacity:1 ;
+    transform: translateY(0)}
+`;
+
 const HeadingPrimaryMain = styled.span`
   display: block;
   font-size: 60px;
@@ -89,6 +102,40 @@ const HeadingPrimarySub = styled.span`
   animation: ${MoveInRight} 1s ease-out;
 `;
 
+const Button = styled.a`
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  background-color: ${props => (props.white ? "#fff" : "white")};
+  color: ${props => (props.white ? "#777" : "white")};
+  transition: all 0.2s;
+
+  ${props =>
+    props.animated &&
+    css`
+      animation: ${MoveUp} 0.5s ease-out 0.75;
+      animation-fill-mode: backwards;
+    `};
+
+  :link {
+  }
+
+  :visited {
+  }
+
+  :hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  :active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+`;
+
 export default class Main extends Component {
   render() {
     return (
@@ -106,6 +153,9 @@ export default class Main extends Component {
                 is where life happens
               </HeadingPrimarySub>
             </HeadingPrimary>
+            <Button href="#" white animated>
+              Discover our packages
+            </Button>
           </TextDiv>
         </Header>
       </div>
