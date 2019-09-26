@@ -3,6 +3,7 @@ $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 $color-grey-dark: #777;
 $color-white: #fff;
+$color-black: #000;
 
 @keyframes MoveInLeft {
   0% {
@@ -83,54 +84,56 @@ $color-white: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 60px;
+
+  &-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation: MoveInLeft 1s ease-out;
+    /* animation-iteration-count: 3;
+      animation-delay: 2s;
+      animation-timing-function: cubic-bezier();
+  
+      */
+  }
+
+  &-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation: MoveInRight 1s ease-out;
+  }
 }
 
-.heading-primary-main {
-  display: block;
-  font-size: 60px;
-  font-weight: 400;
-  letter-spacing: 35px;
-  animation: MoveInLeft 1s ease-out;
-  /* animation-iteration-count: 3;
-    animation-delay: 2s;
-    animation-timing-function: cubic-bezier();
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    background-color: $color-white;
+    color: $color-grey-dark;
+    transition: all 0.2s;
+    animation: MoveUp 0.5s ease-out 0.75;
+    animation-fill-mode: backwards;
+  }
 
-    */
-}
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba($color-black, 0.2);
+  }
 
-.heading-primary-sub {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 17.4px;
-  animation: MoveInRight 1s ease-out;
-}
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($color-black, 0.2);
+  }
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 15px 40px;
-  display: inline-block;
-  border-radius: 100px;
-  background-color: $color-white;
-  color: $color-grey-dark;
-  transition: all 0.2s;
-  animation: MoveUp 0.5s ease-out 0.75;
-  animation-fill-mode: backwards;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn-white {
-  background-color: $color-white;
-  color: $color-grey-dark;
+  &-white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+  }
 }
