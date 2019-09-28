@@ -1,0 +1,27 @@
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 60px;
+
+  &-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation: MoveInLeft 1s ease-out;
+    /* animation-iteration-count: 3;
+        animation-delay: 2s;
+        animation-timing-function: cubic-bezier();
+    
+        */
+  }
+
+  &-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation: MoveInRight 1s ease-out;
+  }
+}
