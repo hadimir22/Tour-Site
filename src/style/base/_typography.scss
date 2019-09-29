@@ -47,3 +47,17 @@
     color: rgba($color-black, 0.2);
   }
 }
+
+.heading-tertiary {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 16px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
