@@ -4,8 +4,7 @@ import "../style/index.scss";
 import About from "./about";
 import Features from "./features";
 import Packages from "./packages";
-import VideoMP4 from "../assets/img/video.mp4";
-import VideoWebm from "../assets/img/video.webm";
+import Stories from "./stories";
 
 export default class Main extends Component {
   render() {
@@ -30,77 +29,79 @@ export default class Main extends Component {
           <About />
           <Features />
           <Packages />
+          <Stories />
 
-          <section className="section-stories">
-            <div className="bg-video">
-              <video className="bg-video__content" autoPlay loop muted>
-                <source src={VideoMP4} type="video/mp4" />
-                <source src={VideoWebm} type="video/webm" />
-                Browser not suporting videos
-              </video>
-            </div>
-            <div className="u-center-text u-margin-bottom-big">
-              <h2 className="heading-secondary">We make people happy</h2>
-            </div>
-
+          <section className="section-book">
             <div className="row">
-              <div className="story">
-                <figure className="story__shape">
-                  <img
-                    src={require("../assets/img/nat-8.jpg")}
-                    alt="person"
-                    className="story__img"
-                  />
-                  <figcaption className="story__caption">Mary Smith</figcaption>
-                </figure>
-                <div className="story__text">
-                  <h3 className="heading-tertiary u-margin-bottom-small">
-                    I had the best week in
-                  </h3>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy. Lorem Ipsum is simply dummy text of the
-                    printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy. Lorem Ipsum is simply dummy text
-                    of the printing and typesetting industry. Lorem Ipsum has
-                    been the industry's standard dummy
-                  </p>
+              <div className="book">
+                <div className="book__form">
+                  <form action="#" className="form">
+                    <div className="  u-margin-bottom-medium">
+                      <h2 className="heading-secondary"> Start booking now</h2>
+                    </div>
+                    <div className="form__group">
+                      <input
+                        type="text"
+                        className="form__input"
+                        placeholder=" Full Name"
+                        id="name"
+                        required
+                      />
+                      <label for="name" className="form__label">
+                        Full Name
+                      </label>
+                    </div>
+
+                    <div className="form__group">
+                      <input
+                        type="email"
+                        className="form__input"
+                        placeholder=" You email"
+                        id="email"
+                        required
+                      />
+                      <label for="email" className="form__label">
+                        Email address
+                      </label>
+                    </div>
+
+                    <div className="form__group">
+                      <div className="form__radio-group">
+                        <input
+                          type="radio"
+                          className="form__radio-input"
+                          id="small"
+                          name="size"
+                        />
+                        <label for="email" className="form__radio-label">
+                          <sapn className="form__radio-button"></sapn>
+                          Small tour group
+                        </label>
+                      </div>
+
+                      <div className="form__radio-group">
+                        <input
+                          type="radio"
+                          className="form__radio-input"
+                          id="large"
+                          name="size"
+                        />
+                        <sapn className="form__radio-button"></sapn>
+                        <label for="email" className="form__radio-label">
+                          large tour group
+                        </label>
+                      </div>
+                    </div>
+
+                    <div className="form__group">
+                      <button className="btn btn-green">
+                        {" "}
+                        Next step &rarr;
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
-            </div>
-
-            <div className="row">
-              <div className="story">
-                <figure className="story__shape">
-                  <img
-                    src={require("../assets/img/nat-9.jpg")}
-                    alt="person"
-                    className="story__img"
-                  />
-                  <figcaption className="story__caption">will smith</figcaption>
-                </figure>
-                <div className="story__text">
-                  <h3 className="heading-tertiary u-margin-bottom-small">
-                    Life changing trip
-                  </h3>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy. Lorem Ipsum is simply dummy text of the
-                    printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy. Lorem Ipsum is simply dummy text
-                    of the printing and typesetting industry. Lorem Ipsum has
-                    been the industry's standard dummy
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="u-center-text u-margin-top-huge">
-              <a href="#" className="btn-text">
-                Read all Stories &rarr;
-              </a>
             </div>
           </section>
         </main>
