@@ -10,7 +10,7 @@ export default class Nav extends Component {
           id="navi-toggle"
         />
         <label for="navi-toggle" className="navigation__button">
-          Menu
+          <span className="navigation__icon">&nbsp;</span>
         </label>
 
         <div className="navigation__background">&nbsp;</div>
