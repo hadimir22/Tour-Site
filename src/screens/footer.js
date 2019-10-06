@@ -1,15 +1,21 @@
 import React, { Component } from "react";
+import Img1 from "../assets/img/logo-green-1x.png";
+import Img2 from "../assets/img/logo-green-2x.png";
+import Img3 from "../assets/img/logo-green-small-1x.png";
+import Img4 from "../assets/img/logo-green-small-2x.png";
 
 export default class Footer extends Component {
   render() {
     return (
       <footer className="footer">
         <div className="footer__logo-box">
-          <img
-            src={require("../assets/img/logo-green-2x.png")}
-            alt="logo"
-            className="footer__logo"
-          />
+          <picture className="footer__logo">
+            <source
+              srcset={`${Img3} 1x, ${Img4} 2x`}
+              media="(max-width: 600px)"
+            />
+            <img srcset={`${Img1} 1x, ${Img2} 2x`} alt="logo" />
+          </picture>
         </div>
         <div className="row">
           <div className="col-1-of-2">

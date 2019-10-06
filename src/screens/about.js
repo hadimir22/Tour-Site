@@ -1,7 +1,10 @@
 import React, { Component } from "react";
-import Photo1 from "../assets/img/nat-1-large.jpg";
-import Photo2 from "../assets/img/nat-2-large.jpg";
-import Photo3 from "../assets/img/nat-3-large.jpg";
+import Photo1 from "../assets/img/nat-1.jpg";
+import Photo2 from "../assets/img/nat-2.jpg";
+import Photo3 from "../assets/img/nat-3.jpg";
+import Photo4 from "../assets/img/nat-1-large.jpg";
+import Photo5 from "../assets/img/nat-1-large.jpg";
+import Photo6 from "../assets/img/nat-1-large.jpg";
 
 export default class About extends Component {
   render() {
